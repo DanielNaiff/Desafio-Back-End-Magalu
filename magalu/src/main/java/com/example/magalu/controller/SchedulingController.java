@@ -19,14 +19,14 @@ public class SchedulingController {
         return ResponseEntity.ok(responseDTO);
     }
 
-    @GetMapping("/id")
+    @GetMapping("/{id}")
     public ResponseEntity<SchedulingResponseDTO> findById(@PathVariable Long id){
         SchedulingResponseDTO responseDTO = service.findById(id);
 
         return ResponseEntity.ok(responseDTO);
     }
 
-    @DeleteMapping("/{id")
+    @DeleteMapping("/{id}")
     public ResponseEntity<SchedulingResponseDTO> delete(@PathVariable Long id){
         service.delete(id);
 
